@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Validation, Pagination, Sorting, and Age Filter</title>
+
+</head>
+
+<body>
+
+    <h2>Form Validation</h2>
+
+    <form id="dataForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName">
+        <span class="error" id="firstNameError"></span>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName">
+        <span class="error" id="lastNameError"></span>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email">
+        <span class="error" id="emailError"></span>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span class="error" id="passwordError"></span>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+        <span class="error" id="phoneError"></span>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" max="">
+        <span class="error" id="dobError"></span>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" readonly>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address">
+        <span class="error" id="addressError"></span>
+
+        <button type="submit" id="submitButton">Submit</button>
+        <input type="hidden" id="entryIndex" name="entryIndex" value="">
+    </form>
+
+    <label for="fromDate">From Date:</label>
+    <input type="date" id="fromDate">
+
+    <label for="toDate">To Date:</label>
+    <input type="date" id="toDate">
+
+    <button id="filterButton">Filter</button>
+    <button id="resetButton">Reset Filter</button>
+
+    <input type="text" id="searchInput" placeholder="Enter search term...">
+
+    <table id="entriesTable">
+        <thead>
+            <tr>
+                <th id="firstNameHeader">First Name <img src="drop-down.png" alt="sort icon"></th>
+                <th id="lastNameHeader">Last Name <img src="drop-down.png" alt="sort icon"></th>
+                <th id="dobHeader">Date of Birth <img src="drop-down.png" alt="sort icon"></th>
+                <th id="ageHeader">Age <img src="drop-down.png" alt="sort icon"></th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Created Date</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="entriesBody"></tbody>
+    </table>
+
+    <div class="pagination-controls">
+        <button id="prevPage" disabled>Previous</button>
+        <span id="pageNumbers"></span>
+        <button id="nextPage">Next</button>
+    </div>
+
+
+
+</body>
+
+</html>
